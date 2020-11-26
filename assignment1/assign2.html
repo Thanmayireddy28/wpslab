@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles1.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <title>Visitor Count</title>
+</head>
+<style>
+    body{
+        background-color: rgb(151, 53, 170);
+        color: crimson;
+    }
+</style>
+<body >
+    <div style="text-align: center; margin-top:17%;">
+    <h1 >Visitor Counter</h1><br>
+    <h4>Number of times the page is opened:</h4>
+    <p class="class0" style="font-size : 50px; color:white">00</p>
+    <h4>IP Address</h4>
+    <br>
+    <p class="class1" style="font-size: 36px;">IP address of user</p>
+</div>
+    <script>
+        function updatecounter(){
+            fetch('https://api.countapi.xyz/update/thanmayireddy/mykey/?amount=1')
+            .then(res =>res.json())
+            .then(data=>counterElement.innerHTML=data.value)
+        }
+        updatecounter();
+        counterElement=document.getElementsByClassName('class0')[0];
+
+        function updateCounter1()
+        {
+            ele1=document.querySelector(".ans1");
+           fetch('https://api.ipify.org/?format=json')
+            .then(res => res.json())
+            .then(data => counterElement2.innerHTML=data.ip);
+        }
+        updateCounter1();
+        counterElement2=document.getElementsByClassName('class1')[0];
+
+    </script>
+</body>
+</html>

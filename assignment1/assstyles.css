@@ -1,0 +1,126 @@
+#navbar{ margin: 20px;
+    border: 2px solid grey;
+}
+.b{position:absolute;
+   top:0;
+   right:0;
+  color: grey;}
+#navbar ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: white;
+
+ }
+ .content{
+  width: 441px;
+  padding: 21px 71px;
+  text-align: center;
+  font-size: 35px;
+ }
+ img{
+     height:50px;
+     width:50px;
+ }
+ li {
+   float: left;
+ }
+ 
+ li a {
+   display: block;
+   color:black;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+ }
+ 
+ li a:hover:not(.active) {
+   background-color: rgb(236, 209, 209);
+ }
+ .btn{
+    text-align: center;
+     color: white;
+     background-color: orangered;
+     padding: 5px 2px;
+ }
+ .active {
+   background-color: #4CAF50;
+ }
+ .gridcontainer{
+   
+     display: grid;
+     grid-template-columns: auto auto ;
+     grid-template-rows: 59px 59px;
+     grid-template-columns: 233px 233px;
+     grid-gap: 10px;
+     background-color :white;
+     padding: 10px;
+ }
+
+ .griditem{
+    background-color: rgba(13, 45, 230, 0.8);
+    color: rgb(253, 255, 253);
+  border: 1px solid black;
+  text-align: center;
+  font-size: 30px;}
+
+  top-left{position: absolute;
+   top: 8px;
+   left: 16px;}
+   .container{
+      display: inline-block;
+   }
+   .container{ margin: 100px 0px 0px 0px;
+      display: flex;
+       
+   }
+   .container img{
+      height: 275px;
+      width: 702px;
+   }
+   .griditem a{ 
+     text-decoration: none;
+font-size: 20px;
+   }
+   @media only screen and (max-width: 600px) {
+      body {
+        background-color: lightblue;
+      }
+      .container{
+          flex-direction: column;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      #navbar a:not(:first-child) {display: none;}
+      #navbar a.icon {
+        float: right;
+        display: block;
+
+      }
+      .lastimg{
+        display: none;
+        width:35px;
+        height: 20px;
+   }
+    }
+    
+    @media screen and (max-width: 600px) {
+      #navbar .responsive {position: relative;}
+      #navbar .responsive .icon {
+        position: absolute;
+        display:flex;
+        right: 0;
+        top: 0;
+      }
+      #navbar .responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      .gridcontainer{
+        display:grid;
+        grid-template-columns: auto;
+      }
+      
+    }
